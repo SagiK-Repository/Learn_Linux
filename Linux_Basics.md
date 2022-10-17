@@ -223,3 +223,74 @@
 </details> 
 
 <br><br><br>
+
+
+
+# 리눅스 사용하기
+
+기본적인 작업을 할 수 있을 정도로 사용해본다.  
+
+- clear : 화면을 깨끗히 한다.
+- pwd : 지금 디렉터리 위치를 띄운다. (Print Working Directory)
+- cd / : / 디렉터리로 이동한다. (Change Directory)
+- ls : 디렉터리 내부 파일을 띄운다. (List Segments)
+  - 리눅스의 주요 디렉토리
+    디렉토리 | 설명
+    -- | --
+    bin | 기본 명령어들이 저장된 디렉토리
+    boot | 부팅에 필요한 가진 파일들이 저장되는 곳
+    dev | 시스템 디바이스 관련 파일들이 저장되는 것
+    etc | 시스템 설정에 관련된 각종 파일들이 저장되는 곳
+    home | 사용자의 홈 디렉토리가 생성되는 곳
+    lib | 커널과 프로그램에 필요한 각종 라이브러리가 저장되는 곳
+    media | CD, USB같은 외부 장치를 연결하는 곳
+    mnt | 탈부착 가능한 장치들을 임시로 연결하는 곳 <br>(WSL의 경우 윈도우의 디렉토리와 연결)
+    opt | 추가 패키지가 설치되는 곳
+    root | root(최고관리자)계정의 홈 디렉토리
+    run | 실행중인 서비스와 관련된 파일들이 저장되는 곳
+    sbin | 시스템 관리자용 명령어들이 저장되는 곳
+    sys | 리눅스 커널 관련 정보가 있는 곳
+    tmp | 시스템 사용중 발생하는 임시데이터가 저장되는 곳
+    usr | 기본 실행파일, 라이브러리, 헤더 파일등이 저장되는 곳
+    var | 시스템 운영중 발생하는 데이터, 로그가 저장되는 곳
+    proc | 실행중인 프로세스 및 커널 정보가 저장되는 곳 <br> 디스크상이 아닌 메모리에 존재
+- cd /var
+- ls -FL : 옵션 합성 가능
+  - ls -F : 디렉토리, 파일 쉽게 구분 가능
+  - ls -l : 각 항목의 세부정보를 확인할 수 있다
+- cd log : cd /var/log 를 할 필요없이 상대적으로 접근이 가능하다.
+- cd .. : 한 디렉토리 밖으로 나간다.
+- mkdir myfolder : 디렉토리를 만든다(Make Directory)
+- vi hello.txt : 메모장과 같이 hello.txt를 입력/수정/저장할 수 있다.
+- cp hello.txt hellow.txt : hello.txt를 hello2.txt로 복제한다. (Copy)
+- mv hello.txt ../ : hello.txt를 한 디렉토리 밖으로 옮긴다.
+- rm hello2.txt : hello2.txt를 삭제한다. (Remove)
+- rm -r /myfolder : myfolder 내부에 있는 모든 파일을 포함하여 삭제
+- wget [URL] : 웹에서 다운, 오른쪽 마우스 = 붙여넣기
+- sudo apt update : apt update를 관리자 권한으로 실행
+- apt : window와 비교하면 Microsoft Store와 같다.
+- node.js 설치해보기
+  - [node.js](https://github.com/nodesource/distributions/blob/master/README.md)사이트에 가서 설치 명령어를 얻는다.
+  ```bash
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+  
+  # 또는
+  sudo apt-get install -y nodejs
+  ```
+  - Node.js의 버전을 확인한다.
+  ```bash
+  node --version
+  ```
+- git으로 Node.js 돌려보기
+  - ubuntu에 git이 설치되어 있는지 확인한다.
+  ```bash
+  git --version
+  ```
+  - git lab에 존재하는 [Node.js 예제](https://gitlab.com/yalco1/practice-linux)를 clone한다.
+  ```bash
+  git https://gitlab.com/yalco1/practice-linux.git
+  ```
+  - cd practice-linux && ls : 한 줄에 2가지 명령어 표현
+  - node app.js : app.js를 node로 실행한다.
+
+
