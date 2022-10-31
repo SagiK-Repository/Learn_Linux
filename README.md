@@ -6,7 +6,7 @@
 리눅스에 대해서 배운다
 
 ### 목표
-- [x] : [Linux 기초]()
+- [x] : [Linux 기초](https://github.com/SagiK-Repository/Learn_Linux/blob/main/Linux_Basics.md)
 - [ ] : [목적을 이루기 위한 목표2](목표 2 사이트)
 - [ ] : [목적을 이루기 위한 목표3](목표 3 사이트)
 
